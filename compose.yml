@@ -1,14 +1,11 @@
 services:
   notebook-milvus:
-    image: jupyter-milvus-test
+    image: jupyter-milvus
     build:
       context: .
       dockerfile: Dockerfile
     container_name: notebook-milvus
     ports:
       - "8888:8888"
-    environment:
-      JUPYTER_ENABLE_LAB: yes
     env_file:
       - .env
-    command: start-notebook.py --NotebookApp.token='' 

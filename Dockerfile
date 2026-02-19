@@ -1,20 +1,20 @@
-FROM quay.io/jupyter/datascience-notebook:82d322f00937
-USER root
+FROM python:3.11-slim
 
-ARG openjdk_version="17"
-RUN apt-get update --yes && \
-    apt-get install --yes --no-install-recommends \
-    "openjdk-${openjdk_version}-jre-headless" \
-    ca-certificates-java \
-    default-libmysqlclient-dev \
-    build-essential  \
-    pkg-config && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gcc \
+    build-essential \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
 
-RUN pip install --upgrade pip 
-COPY requirements.txt /home/requirements.txt
-RUN pip install --no-cache-dir --upgrade -r /home/requirements.txt && \
-    fix-permissions "${CONDA_DIR}" && \
-    fix-permissions "/home/${NB_USER}"
-    
-USER ${NB_UID}
+RUN pip install --upgrade pip
+
+RUN pip install --no-cache-dir notebook jupyterlab ipykernel
+
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir -r /tmp/requirements.txt
+
+WORKDIR /notebooks
+
+EXPOSE 8888
+
+CMD ["jupyter", "lab", "--ip=0.0.0.0", "--port=8888", "--no-browser", "--allow-root", "--ServerApp.token=", "--ServerApp.password="]

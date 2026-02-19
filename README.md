@@ -27,7 +27,7 @@ To run this project, follow these steps:
 
 3. **Copy the documentation files into the container:**
    ```bash
-   docker exec notebook-milvus mkdir -p /home/jovyan/milvus_docs/en/ && docker cp milvus_docs/en/faq notebook-milvus:/home/jovyan/milvus_docs/en/faq
+   docker exec notebook-milvus mkdir -p /notebooks/milvus_docs/en/ && docker cp milvus_docs/en/faq notebook-milvus:/notebooks/milvus_docs/en/faq
    ```
    This command creates the required directories and copies the Milvus FAQ documentation into the container, which is needed for the RAG demo.
 
@@ -56,5 +56,5 @@ An example showcasing Milvus integration with Large Language Models and embeddin
 
 This demo illustrates a real-world use case for combining Milvus vector search with AI models to build intelligent question-answering systems.
 
-![vanilla_rag](docs/vanilla_rag.png)
+![vanilla_rag](media/vanilla_rag.png)
 
