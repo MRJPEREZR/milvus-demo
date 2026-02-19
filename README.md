@@ -47,7 +47,7 @@ A foundational example that demonstrates core Milvus functionality:
 This demo is ideal for understanding the basic workflow of working with Milvus.
 
 ### 2. **RAGDemo.ipynb** - Retrieval-Augmented Generation (RAG)
-An advanced example showcasing Milvus integration with Large Language Models and embeddings:
+An example showcasing Milvus integration with Large Language Models and embeddings:
 - **Generating Embeddings**: Uses OpenAI embeddings to convert text into vector representations
 - **Document Processing**: Reads documentation files (Milvus FAQ docs) and creates embeddings for them
 - **Collection Management**: Creates and populates a Milvus collection with embedded documents
@@ -55,4 +55,6 @@ An advanced example showcasing Milvus integration with Large Language Models and
 - **RAG Integration**: Uses retrieved documents as context to generate accurate answers with an LLM
 
 This demo illustrates a real-world use case for combining Milvus vector search with AI models to build intelligent question-answering systems.
+
+![vanilla_rag](docs/vanilla_rag.png)
 
