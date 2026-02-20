@@ -1,5 +1,7 @@
 # Milvus Demo
 
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1XIhijEtjHcgaIgA2vnrFZJhqNWzf0thg#scrollTo=Pez10whM9Elc)   
+
 📦 **[Install PyMilvus](https://milvus.io/docs/install-pymilvus.md)** | 📦 **[Milvus Lite](https://milvus.io/docs/milvus_lite.md)**
 
 > **Note:** All project requirements are listed in `requirements.txt` and will be automatically installed in the container during the build process.
