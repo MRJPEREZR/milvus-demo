@@ -12,3 +12,8 @@ langchain-mcp-adapters>=0.1.14
 
 # Utilities
 python-dotenv>=1.2.1
+tqdm>=4.66.0
+
+# Jupyter Environment (Optionnel si déjà géré par votre image Docker)
+jupyterlab>=4.0.0
+ipykernel>=6.29.0
