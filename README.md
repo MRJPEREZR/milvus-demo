@@ -23,13 +23,7 @@ To run this project, follow these steps:
    ```bash
    docker compose up --build
    ```
-   This command builds and starts all the necessary services, including the Milvus database and Jupyter notebook server.
-
-3. **Copy the documentation files into the container:**
-   ```bash
-   docker exec notebook-milvus mkdir -p /home/jovyan/milvus_docs/en/ && docker cp milvus_docs/en/faq notebook-milvus:/home/jovyan/milvus_docs/en/faq
-   ```
-   This command creates the required directories and copies the Milvus FAQ documentation into the container, which is needed for the RAG demo.
+   This command builds and starts all the necessary services. The `examples/` notebooks and `milvus_docs/` dataset are automatically mounted into the container via volumes.
 
 Once the container is running, you can access the Jupyter notebook interface and run the demo examples.
 

@@ -11,4 +11,7 @@ services:
       JUPYTER_ENABLE_LAB: yes
     env_file:
       - .env
+    volumes:
+      - ./examples:/home/jovyan/examples
+      - ./milvus_docs:/home/jovyan/milvus_docs
     command: start-notebook.py --NotebookApp.token='' 

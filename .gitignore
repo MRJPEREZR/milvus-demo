@@ -1,2 +1,5 @@
 *.db
 *.env
+.milvus_demo.db.lock
+.ipynb_checkpoints
+.DS_Store
