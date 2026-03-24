@@ -8,7 +8,7 @@
 
 📊 **[How Fast is Vector Search Compared to Traditional Search?](https://milvus.io/ai-quick-reference/how-fast-is-vector-search-compared-to-traditional-search)**
 
-# Prerequisites 
+## Prerequisites
 
 To run this project, follow these steps:
 
@@ -17,7 +17,11 @@ To run this project, follow these steps:
    ```bash
    cp .env.example .env
    ```
-   Then open the `.env` file and replace the placeholder token with your GitHub Personal Access Token (PAT). This is required for authentication in the project.
+   Then open the `.env` file and replace placeholder values with your own model/API configuration:
+   - `AI_API_KEY`
+   - `AI_ENDPOINT`
+   - `AI_MODEL`
+   - `AI_EMBEDDING_MODEL`
 
 2. **Start the Docker environment:**
    ```bash
@@ -29,9 +33,9 @@ Once the container is running, you can access the Jupyter notebook interface and
 
 ## Examples
 
-This project includes two demo notebooks in the `/examples` directory:
+This project includes three demo notebooks in the `/examples` directory:
 
-### 1. **simpleDemo.ipynb** - Basic Milvus Operations
+### 1. **tp1-simple-demo.ipynb** - Basic Milvus Operations
 A foundational example that demonstrates core Milvus functionality:
 - **Creating a Collection**: Set up a new Milvus collection with a specified dimension
 - **Inserting Data**: Add sample vector data with associated metadata (text and subject fields)
@@ -40,7 +44,7 @@ A foundational example that demonstrates core Milvus functionality:
 
 This demo is ideal for understanding the basic workflow of working with Milvus.
 
-### 2. **RAGDemo.ipynb** - Retrieval-Augmented Generation (RAG)
+### 2. **tp2-RAG.ipynb** - Retrieval-Augmented Generation (RAG)
 An example showcasing Milvus integration with Large Language Models and embeddings:
 - **Generating Embeddings**: Uses OpenAI embeddings to convert text into vector representations
 - **Document Processing**: Reads documentation files (Milvus FAQ docs) and creates embeddings for them
@@ -50,5 +54,5 @@ An example showcasing Milvus integration with Large Language Models and embeddin
 
 This demo illustrates a real-world use case for combining Milvus vector search with AI models to build intelligent question-answering systems.
 
-![vanilla_rag](docs/vanilla_rag.png)
-
+### 3. **tp3.ipynb** - Vector Comparison Lab
+An exploratory lab focused on AI vector comparison concepts with Milvus.
