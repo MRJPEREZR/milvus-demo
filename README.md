@@ -56,5 +56,3 @@ This demo illustrates a real-world use case for combining Milvus vector search w
 
 ### 3. **tp3.ipynb** - Vector Comparison Lab
 An exploratory lab focused on AI vector comparison concepts with Milvus.
-
-![vanilla_rag](docs/vanilla_rag.png)
